@@ -1,3 +1,6 @@
+#Sistema de gestion de ventas
+
+#Valores
 def calcular_subtotal(precio, cantidad):
     return precio*cantidad
 
@@ -17,7 +20,8 @@ def calcular_total(subtotal,descuento,iva):
 
 def mostrar_resumen(producto,precio,cantidad,subtotal,
                     descuento,iva,total):
-    
+                        
+#Muestra del resumen de la compra
     print("\n===RESUMEN DE COMPRA===")
     print(f"-Nombre del producto: {producto} ")
     print(f"-Precio unitario: {precio}$")
@@ -39,6 +43,7 @@ while True:
     try:
         opcion = int(input("\n=Elija una opcion: "))
 
+        #Opcion 1
         if opcion == 1:
 
             producto=input("\nIngrese nombre del producto: ")
@@ -65,13 +70,16 @@ while True:
                 total
             )
 
+        #Opcion 2
         elif opcion == 2:
             print(f"\n=Total ventas acumuladas: ${valor_acumulado}")
 
+        #Opcion 3
         elif opcion == 3:
             print("\n=Saliendo del programa...")
             break
-        
+
+        #Alerta de termino invalido
         else:
             print("¡Ingrese una opcion valida!")
     except ValueError:
